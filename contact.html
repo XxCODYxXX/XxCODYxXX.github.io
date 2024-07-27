@@ -1,0 +1,260 @@
+<!--Author: Cody Dobbs
+Filename: contact.html 
+Date: 7/24/2024-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Game Dev Studio</title>
+    <style>
+        body {
+            font-family: 'Press Start 2P', cursive; /* Pixel-style font for a retro feel */
+            background: #000; /* Black background for neon effect */
+            color: #f4f4f4; /* Light text color for contrast */
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #222; /* Dark background for header */
+            color: #ff007f; /* Neon pink for text */
+            padding: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: relative;
+            border-bottom: 3px solid #ff007f; /* Neon pink border */
+        }
+
+        .menu-toggle {
+            background: none;
+            border: none;
+            font-size: 2em;
+            color: #ff007f;
+            cursor: pointer;
+            z-index: 1;
+        }
+
+        .main-nav {
+            display: flex;
+        }
+
+        .main-nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        .main-nav ul li {
+            margin-right: 20px;
+        }
+
+        .main-nav ul li a {
+            color: #ff007f;
+            text-decoration: none;
+            font-size: 1.2em;
+        }
+
+        .main-nav ul li a:hover {
+            text-decoration: underline;
+        }
+
+        .main-content {
+            background: rgba(0, 0, 0, 0.8); /* Dark semi-transparent background */
+            padding: 30px;
+            border-radius: 15px;
+            margin: 20px auto;
+            max-width: 800px;
+            border: 3px solid #00ff00; /* Neon green border */
+            box-shadow: 0 0 20px rgba(0, 255, 0, 0.5); /* Neon green glow effect */
+        }
+
+        .section h2 {
+            color: #ff007f; /* Neon pink for headings */
+            font-size: 2.5em;
+            text-shadow: 0 0 10px #ff007f, 0 0 20px #ff007f; /* Neon pink glow effect */
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        label {
+            margin-top: 15px;
+            font-size: 1.2em;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        textarea,
+        select {
+            width: 100%;
+            padding: 12px;
+            margin-top: 8px;
+            border: 2px solid #ff007f;
+            border-radius: 8px;
+            background-color: #1a1a1a; /* Dark background for input fields */
+            color: #f4f4f4;
+            font-family: 'Press Start 2P', cursive;
+        }
+
+        button[type="submit"] {
+            background-color: #00ff00; /* Neon green button */
+            color: #000;
+            border: 2px solid #00ff00;
+            padding: 12px 20px;
+            border-radius: 8px;
+            cursor: pointer;
+            margin-top: 15px;
+            font-family: 'Press Start 2P', cursive;
+            font-size: 1.1em;
+        }
+
+        button[type="submit"]:hover {
+            background-color: #00cc00; /* Slightly darker green on hover */
+        }
+
+        fieldset {
+            border: 2px dashed #ff007f;
+            padding: 15px;
+            margin-top: 15px;
+            border-radius: 8px;
+            background-color: #1a1a1a;
+        }
+
+        legend {
+            font-weight: bold;
+            color: #ff007f;
+            font-size: 1.2em;
+        }
+
+        input[type="radio"],
+        input[type="checkbox"] {
+            margin-right: 8px;
+        }
+
+        select {
+            background-color: #1a1a1a;
+        }
+
+        /* Responsive styling for devices with a max width of 600px */
+        @media (max-width: 600px) {
+            .main-nav {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+                background-color: #222;
+            }
+
+            .main-nav.active {
+                display: flex;
+            }
+
+            .main-nav ul {
+                display: flex;
+                flex-direction: column;
+                padding: 0;
+            }
+
+            .main-nav ul li {
+                margin: 10px 0;
+                text-align: center;
+            }
+
+            .menu-toggle {
+                display: block;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Game Dev Studio</h1>
+        <button class="menu-toggle" aria-label="Toggle menu">☰</button>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="games.html">Games</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="services.html">Services</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="main-content">
+        <section class="section">
+            <h2>Contact Us</h2>
+            <p>Have questions or want to get in touch with us? Use the form below to reach out, and we’ll get back to you as soon as possible!</p>
+            <form action="#" method="post">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+
+                <fieldset>
+                    <legend>Preferred Contact Method:</legend>
+                    <label>
+                        <input type="radio" name="contact-method" value="email" checked>
+                        Email
+                    </label>
+                    <label>
+                        <input type="radio" name="contact-method" value="phone">
+                        Phone
+                    </label>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Interests:</legend>
+                    <label>
+                        <input type="checkbox" name="interest" value="games">
+                        Video Games
+                    </label>
+                    <label>
+                        <input type="checkbox" name="interest" value="development">
+                        Game Development
+                    </label>
+                </fieldset>
+
+                <label for="department">Department:</label>
+                <select id="department" name="department">
+                    <option value="support">Support</option>
+                    <option value="sales">Sales</option>
+                    <option value="general">General Inquiry</option>
+                </select>
+
+                <button type="submit">Send Message</button>
+            </form>
+            
+            <p>
+                <a href="mailto:info@gamedevstudio.com" style="color: #00ff00;">Email us</a>
+            </p>
+            <p>
+                <a href="https://www.google.com/maps?q=123+Game+Studio+St,+City,+Country" target="_blank" style="color: #00ff00;">Find us on the map</a>
+            </p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Game Dev Studio. All rights reserved.</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const menuToggle = document.querySelector('.menu-toggle');
+            const nav = document.querySelector('.main-nav');
+
+            menuToggle.addEventListener('click', () => {
+                nav.classList.toggle('active');
+            });
+        });
+    </script>
+</body>
+</html>

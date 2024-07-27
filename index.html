@@ -1,0 +1,258 @@
+<!--Author: Cody Dobbs
+Filename: index.html 
+Date: 7/24/2024-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Dev Studio - Home</title>
+    <style>
+        body {
+            font-family: 'Press Start 2P', cursive; /* Pixel-style font for a retro feel */
+            margin: 0;
+            padding: 0;
+            background-color: #000; /* Black background for a neon effect */
+            color: #f4f4f4;
+        }
+
+        header {
+            background-color: #222; /* Dark background for header */
+            color: #ff007f; /* Neon pink for text */
+            padding: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: relative;
+            border-bottom: 3px solid #ff007f; /* Neon pink border */
+        }
+
+        .menu-toggle {
+            background: none;
+            border: none;
+            font-size: 2em;
+            color: #ff007f;
+            cursor: pointer;
+            z-index: 1;
+        }
+
+        .main-nav {
+            display: flex;
+        }
+
+        .main-nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        .main-nav ul li {
+            margin-right: 20px;
+        }
+
+        .main-nav ul li a {
+            color: #ff007f;
+            text-decoration: none;
+            font-size: 1.2em;
+        }
+
+        .main-nav ul li a:hover {
+            text-decoration: underline;
+        }
+
+        .hero {
+            background: url('game-hero.jpg') no-repeat center center/cover;
+            color: #f4f4f4;
+            text-align: center;
+            padding: 120px 20px;
+            margin-bottom: 30px;
+            border-bottom: 5px solid #ff007f; /* Neon pink border */
+        }
+
+        .hero h1 {
+            font-size: 4em;
+            margin: 0;
+            text-shadow: 0 0 20px #ff007f; /* Neon pink glow effect */
+        }
+
+        .hero p {
+            font-size: 1.5em;
+            margin: 10px 0;
+            text-shadow: 0 0 10px #ff007f; /* Neon pink glow effect */
+        }
+
+        .cta-button {
+            background-color: #00ff00; /* Neon green */
+            color: #fff;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 8px;
+            text-decoration: none;
+            font-size: 1.2em;
+            display: inline-block;
+            margin-top: 20px;
+            box-shadow: 0 0 10px #00ff00; /* Neon green glow effect */
+        }
+
+        .cta-button:hover {
+            background-color: #00cc00; /* Slightly darker green on hover */
+        }
+
+        .main-content {
+            padding: 30px;
+            text-align: center;
+        }
+
+        .main-content h2 {
+            color: #ff007f;
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            text-shadow: 0 0 10px #ff007f; /* Neon pink glow effect */
+        }
+
+        .main-content .section {
+            margin-bottom: 50px;
+        }
+
+        .main-content img {
+            width: 100%;
+            max-width: 700px;
+            height: auto;
+            border-radius: 8px;
+            border: 3px solid #ff007f; /* Neon pink border around images */
+            box-shadow: 0 0 10px #ff007f; /* Neon pink glow effect */
+        }
+
+        footer {
+            background-color: #222;
+            color: #f4f4f4;
+            text-align: center;
+            padding: 10px;
+            border-top: 3px solid #ff007f; /* Neon pink border */
+        }
+
+        /* Responsive styling for devices with a max width of 600px */
+        @media (max-width: 600px) {
+            header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .main-nav {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+                background-color: #222;
+            }
+
+            .main-nav.active {
+                display: flex;
+            }
+
+            .main-nav ul {
+                display: flex;
+                flex-direction: column;
+                padding: 0;
+            }
+
+            .main-nav ul li {
+                margin: 10px 0;
+                text-align: center;
+            }
+
+            .menu-toggle {
+                display: block;
+            }
+
+            .hero {
+                padding: 60px 10px; /* Reduced padding for smaller screens */
+            }
+
+            .hero h1 {
+                font-size: 2.5em; /* Smaller font size for headings */
+            }
+
+            .hero p {
+                font-size: 1.2em; /* Smaller font size for paragraph */
+            }
+
+            .cta-button {
+                font-size: 1em;
+                padding: 10px 20px; /* Adjusted padding for smaller screens */
+            }
+
+            .main-content {
+                padding: 15px; /* Reduced padding for smaller screens */
+            }
+
+            .main-content h2 {
+                font-size: 2em; /* Smaller font size for headings */
+            }
+
+            .main-content img {
+                max-width: 100%; /* Ensures images fit within the viewport */
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Game Dev Studio</h1>
+        <button class="menu-toggle" aria-label="Toggle menu">☰</button>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="games.html">Games</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="services.html">Services</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>Welcome to Game Dev Studio!</h1>
+        <p>Crafting immersive experiences and unforgettable adventures in gaming.</p>
+        <a href="games.html" class="cta-button">Explore Our Games</a>
+    </section>
+
+    <main class="main-content">
+        <section class="section">
+            <h2>Our Vision</h2>
+            <p>At Game Dev Studio, we are passionate about creating innovative and engaging video games. Our vision is to push the boundaries of interactive entertainment and deliver experiences that captivate and inspire players.</p>
+            <img src="images/studio.jpg" alt="Game Development Studio">
+        </section>
+
+        <section class="section">
+            <h2>Join Us</h2>
+            <p>Join our vibrant community of enthusiasts and stay ahead of the curve with engaging posts, stunning visuals, and interactive content that will keep you hooked. Whether you're a die-hard fan or just curious about game development, our blog has something for everyone. Don't miss out—explore now and be part of our ever-evolving adventure!</p>
+            <img src="images/team.jpg" alt="Join Our Team">
+        </section>
+
+        <section class="section">
+            <h2>Latest News</h2>
+            <p>Stay in the Loop with the Latest News and Updates!</p>
+            <p>Dive into the heart of our development world and be the first to know about all things exciting and new! From groundbreaking game releases to exclusive behind-the-scenes looks at our development process, our blog is your gateway to a treasure trove of updates and announcements.</p>
+            <p>Discover insider insights straight from our development team as they share their creative journey, challenges, and triumphs. Get a sneak peek at upcoming features, learn about our innovative approaches, and see how your favorite games are crafted from concept to completion.</p>
+            <p>Join our vibrant community of enthusiasts and stay ahead of the curve with engaging posts, stunning visuals, and interactive content that will keep you hooked. Whether you're a die-hard fan or just curious about game development, our blog has something for everyone. Don't miss out—explore now and be part of our ever-evolving adventure!</p>
+            <a href="services.html" class="cta-button">Read Our Blog</a>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Game Dev Studio. All rights reserved.</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const menuToggle = document.querySelector('.menu-toggle');
+            const nav = document.querySelector('.main-nav');
+
+            menuToggle.addEventListener('click', () => {
+                nav.classList.toggle('active');
+            });
+        });
+    </script>
+</body>
+</html>

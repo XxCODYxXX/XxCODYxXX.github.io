@@ -1,0 +1,313 @@
+<!--Author: Cody Dobbs
+Filename: games.html 
+Date: 7/24/2024-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Games - Game Dev Studio</title>
+    <style>
+        body {
+            font-family: 'Press Start 2P', cursive; /* Pixel-style font for a retro feel */
+            margin: 0;
+            padding: 0;
+            background-color: #000; /* Black background for neon effect */
+            color: #f4f4f4;
+        }
+
+        header {
+            background-color: #222; /* Dark background for header */
+            color: #ff007f; /* Neon pink for text */
+            padding: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: relative;
+            border-bottom: 3px solid #ff007f; /* Neon pink border */
+        }
+
+        .menu-toggle {
+            background: none;
+            border: none;
+            font-size: 2em;
+            color: #ff007f;
+            cursor: pointer;
+            z-index: 1;
+        }
+
+        .main-nav {
+            display: flex;
+        }
+
+        .main-nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        .main-nav ul li {
+            margin-right: 20px;
+        }
+
+        .main-nav ul li a {
+            color: #ff007f;
+            text-decoration: none;
+            font-size: 1.2em;
+        }
+
+        .main-nav ul li a:hover {
+            text-decoration: underline;
+        }
+
+        .main-content {
+            background-color: #333; /* Slightly darker background for the content area */
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px auto;
+            max-width: 900px;
+            border: 5px solid #ff007f; /* Neon pink border */
+            box-shadow: 0 0 15px #ff007f; /* Neon pink glow effect */
+            position: relative; /* Ensure dropdowns are positioned relative to this */
+        }
+
+        .section h2 {
+            color: #ff007f; /* Neon pink for headings */
+            font-size: 2.5em;
+            text-shadow: 0 0 10px #ff007f; /* Neon pink glow effect */
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        table, th, td {
+            border: 1px solid #444;
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: left;
+            position: relative; /* Position relative to allow absolute positioning of dropdowns */
+        }
+
+        th {
+            background-color: #222;
+            color: #ff007f; /* Neon pink text */
+        }
+
+        tr:nth-child(even) {
+            background-color: #2a2a2a;
+        }
+
+        tr:nth-child(odd) {
+            background-color: #1c1c1c;
+        }
+
+        .dropdown-content {
+            display: none;
+            padding: 10px;
+            background-color: #444;
+            border: 1px solid #333;
+            border-radius: 5px;
+            position: absolute;
+            width: calc(100% - 20px);
+            left: 10px;
+            z-index: 10; /* Ensure it appears above other content */
+            top: 100%; /* Position below the table row */
+        }
+
+        .dropdown-content p {
+            margin: 0;
+            font-size: 1em;
+        }
+
+        .dropdown {
+            cursor: pointer;
+        }
+
+        .dropdown.active .dropdown-content {
+            display: block;
+        }
+
+        footer {
+            background-color: #222;
+            color: #f4f4f4;
+            text-align: center;
+            padding: 10px;
+            border-top: 3px solid #ff007f; /* Neon pink border */
+        }
+
+        /* Responsive styling for devices with a max width of 600px */
+        @media (max-width: 600px) {
+            .main-nav {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+                background-color: #222;
+            }
+
+            .main-nav.active {
+                display: flex;
+            }
+
+            .main-nav ul {
+                display: flex;
+                flex-direction: column;
+                padding: 0;
+            }
+
+            .main-nav ul li {
+                margin: 10px 0;
+                text-align: center;
+            }
+
+            .menu-toggle {
+                display: block;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Game Dev Studio</h1>
+        <button class="menu-toggle" aria-label="Toggle menu">☰</button>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="games.html">Games</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="services.html">Services</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="main-content">
+        <section class="section">
+            <h2>Our Featured Games</h2>
+            <p>Explore some of our most popular and exciting games. Click on the game titles to learn more about each one.</p>
+
+            <h3>Game Details</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Title</th>
+                        <th>Genre</th>
+                        <th>Platform</th>
+                        <th>Release Date</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="dropdown">
+                        <td>Epic Adventure</td>
+                        <td>Action RPG</td>
+                        <td>PC, Console</td>
+                        <td>March 2024</td>
+                        <td class="dropdown-content">
+                            <p><strong>Description:</strong> Epic Adventure takes you on a thrilling journey through a vast fantasy world, filled with challenging quests and powerful enemies. Experience a deep storyline and dynamic combat mechanics.</p>
+                            <p><strong>Features:</strong> 
+                                - Engaging storyline with branching paths<br>
+                                - Rich, open-world environments<br>
+                                - Customizable character classes and abilities
+                            </p>
+                        </td>
+                    </tr>
+                    <tr class="dropdown">
+                        <td>Space Saga</td>
+                        <td>Sci-Fi Shooter</td>
+                        <td>PC, Console</td>
+                        <td>June 2024</td>
+                        <td class="dropdown-content">
+                            <p><strong>Description:</strong> Space Saga plunges you into an epic interstellar conflict, where you pilot advanced spacecraft in intense dogfights against alien fleets. Experience high-octane action and immersive space battles.</p>
+                            <p><strong>Features:</strong>
+                                - Realistic space combat physics<br>
+                                - Multiple spacecraft with unique abilities<br>
+                                - Detailed alien worlds and space stations
+                            </p>
+                        </td>
+                    </tr>
+                    <tr class="dropdown">
+                        <td>Dungeon Quest</td>
+                        <td>Dungeon Crawler</td>
+                        <td>PC, Mobile</td>
+                        <td>August 2024</td>
+                        <td class="dropdown-content">
+                            <p><strong>Description:</strong> Dungeon Quest invites you to delve into dark and mysterious dungeons, battling monsters and solving puzzles. Uncover hidden treasures and challenge formidable bosses.</p>
+                            <p><strong>Features:</strong>
+                                - Procedurally generated dungeons<br>
+                                - Varied enemy types and bosses<br>
+                                - Extensive loot and customization options
+                            </p>
+                        </td>
+                    </tr>
+                    <tr class="dropdown">
+                        <td>Fantasy Realm</td>
+                        <td>Strategy</td>
+                        <td>PC</td>
+                        <td>November 2024</td>
+                        <td class="dropdown-content">
+                            <p><strong>Description:</strong> Fantasy Realm is a strategy game where you build and manage your own kingdom, forging alliances and waging wars to expand your empire. Develop your strategies and navigate a complex political landscape.</p>
+                            <p><strong>Features:</strong>
+                                - In-depth kingdom management<br>
+                                - Strategic combat and diplomacy<br>
+                                - Detailed historical and fantasy lore
+                            </p>
+                        </td>
+                    </tr>
+                    <tr class="dropdown">
+                        <td>Hero's Journey</td>
+                        <td>Adventure</td>
+                        <td>Console</td>
+                        <td>December 2024</td>
+                        <td class="dropdown-content">
+                            <p><strong>Description:</strong> Hero's Journey follows a young hero's quest to save their world from impending doom. Explore vibrant landscapes, solve puzzles, and build relationships with a diverse cast of characters.</p>
+                            <p><strong>Features:</strong>
+                                - Rich narrative with branching dialogue<br>
+                                - Beautifully designed environments<br>
+                                - Variety of puzzles and mini-games
+                            </p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Game Dev Studio. All rights reserved.</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const dropdowns = document.querySelectorAll('.dropdown');
+
+            dropdowns.forEach(dropdown => {
+                dropdown.addEventListener('click', () => {
+                    const content = dropdown.querySelector('.dropdown-content');
+                    const isActive = content.style.display === 'block';
+                    
+                    // Close all dropdowns
+                    document.querySelectorAll('.dropdown-content').forEach(d => {
+                        d.style.display = 'none';
+                    });
+
+                    // Toggle the clicked dropdown
+                    content.style.display = isActive ? 'none' : 'block';
+                });
+            });
+
+            const menuToggle = document.querySelector('.menu-toggle');
+            const nav = document.querySelector('.main-nav');
+
+            menuToggle.addEventListener('click', () => {
+                nav.classList.toggle('active');
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,165 @@
+<!--Author: Cody Dobbs
+Filename: about.html 
+Date: 7/24/2024-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Game Dev Studio</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: 'Press Start 2P', cursive; /* Pixel-style font for a retro feel */
+            background: #000; /* Black background for neon effect */
+            color: #f4f4f4; /* Light text color for contrast */
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #222; /* Dark background for header */
+            color: #ff007f; /* Neon pink for text */
+            padding: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: relative;
+            border-bottom: 3px solid #ff007f; /* Neon pink border */
+        }
+
+        .menu-toggle {
+            background: none;
+            border: none;
+            font-size: 2em;
+            color: #ff007f;
+            cursor: pointer;
+            z-index: 1;
+        }
+
+        .main-nav {
+            display: flex;
+        }
+
+        .main-nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        .main-nav ul li {
+            margin-right: 20px;
+        }
+
+        .main-nav ul li a {
+            color: #ff007f;
+            text-decoration: none;
+            font-size: 1.2em;
+        }
+
+        .main-nav ul li a:hover {
+            text-decoration: underline;
+        }
+
+        .main-content {
+            background: rgba(0, 0, 0, 0.8); /* Dark semi-transparent background */
+            padding: 30px;
+            border-radius: 15px;
+            margin: 20px auto;
+            max-width: 900px;
+            border: 3px solid #ff007f; /* Neon pink border */
+            box-shadow: 0 0 20px rgba(255, 0, 127, 0.5); /* Neon pink glow effect */
+        }
+
+        .section h2 {
+            color: #00ff00; /* Neon green for headings */
+            font-size: 2.5em;
+            text-shadow: 0 0 10px #00ff00, 0 0 20px #00ff00; /* Neon green glow effect */
+        }
+
+        .section p {
+            font-size: 1.2em;
+            line-height: 1.6;
+        }
+
+        .section img {
+            width: 100%;
+            max-width: 800px;
+            height: auto;
+            border-radius: 8px;
+            border: 3px solid #ff007f; /* Neon pink border around images */
+            box-shadow: 0 0 10px rgba(255, 0, 127, 0.5); /* Neon pink glow effect */
+        }
+
+        /* Responsive styling for devices with a max width of 600px */
+        @media (max-width: 600px) {
+            .main-nav {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+                background-color: #222;
+            }
+
+            .main-nav.active {
+                display: flex;
+            }
+
+            .main-nav ul {
+                display: flex;
+                flex-direction: column;
+                padding: 0;
+            }
+
+            .main-nav ul li {
+                margin: 10px 0;
+                text-align: center;
+            }
+
+            .menu-toggle {
+                display: block;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Game Dev Studio</h1>
+        <button class="menu-toggle" aria-label="Toggle menu">☰</button>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="games.html">Games</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="services.html">Services</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="main-content">
+        <section class="section">
+            <h2>About Us</h2>
+            <p>At Game Dev Studio, we specialize in creating cutting-edge video games that push the boundaries of interactive entertainment. Our team is passionate about crafting unique gaming experiences that captivate and engage players around the world.</p>
+            <p>Founded in 3001, we have developed a variety of games across different genres, each reflecting our commitment to quality and innovation. Our studio combines creative storytelling, advanced technology, and meticulous design to deliver games that leave a lasting impact.</p>
+            <img src="images/team.jpg" alt="Our Team">
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Game Dev Studio. All rights reserved.</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const menuToggle = document.querySelector('.menu-toggle');
+            const nav = document.querySelector('.main-nav');
+
+            menuToggle.addEventListener('click', () => {
+                nav.classList.toggle('active');
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,200 @@
+<!--Author: Cody Dobbs
+Filename: services.html 
+Date: 7/24/2024-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services - Game Dev Studio</title>
+    <style>
+        body {
+            font-family: 'Press Start 2P', cursive; /* Pixel-style font for a retro feel */
+            margin: 0;
+            padding: 0;
+            background-color: #000; /* Black background for neon effect */
+            color: #f4f4f4;
+        }
+
+        header {
+            background-color: #222; /* Dark background for header */
+            color: #ff007f; /* Neon pink for text */
+            padding: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: relative;
+            border-bottom: 3px solid #ff007f; /* Neon pink border */
+        }
+
+        .menu-toggle {
+            background: none;
+            border: none;
+            font-size: 2em;
+            color: #ff007f;
+            cursor: pointer;
+            z-index: 1;
+        }
+
+        .main-nav {
+            display: flex;
+        }
+
+        .main-nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        .main-nav ul li {
+            margin-right: 20px;
+        }
+
+        .main-nav ul li a {
+            color: #ff007f;
+            text-decoration: none;
+            font-size: 1.2em;
+        }
+
+        .main-nav ul li a:hover {
+            text-decoration: underline;
+        }
+
+        .main-content {
+            background-color: #333; /* Slightly darker background for the content area */
+            padding: 30px; /* Increased padding for more space */
+            border-radius: 8px;
+            margin: 20px auto;
+            max-width: 900px;
+            border: 5px solid #ff007f; /* Neon pink border */
+            box-shadow: 0 0 15px #ff007f; /* Neon pink glow effect */
+        }
+
+        .section h2 {
+            color: #ff007f; /* Neon pink for headings */
+            font-size: 2.5em;
+            text-shadow: 0 0 10px #ff007f; /* Neon pink glow effect */
+        }
+
+        .section p {
+            font-size: 1.2em;
+            line-height: 1.6;
+            margin-bottom: 20px; /* Space below the paragraph */
+        }
+
+        ul {
+            list-style-type: disc;
+            padding-left: 20px;
+        }
+
+        li {
+            margin-bottom: 15px; /* Increased spacing between list items */
+            font-size: 1.1em; /* Slightly larger font size for better readability */
+        }
+
+        footer {
+            background-color: #222;
+            color: #f4f4f4;
+            text-align: center;
+            padding: 10px;
+            border-top: 3px solid #ff007f; /* Neon pink border */
+        }
+
+        iframe {
+            width: 100%;
+            height: auto;
+            border: 0;
+            margin-top: 20px;
+            border-radius: 8px;
+        }
+
+        /* Responsive styling for devices with a max width of 600px */
+        @media (max-width: 600px) {
+            .main-nav {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+                background-color: #222;
+            }
+
+            .main-nav.active {
+                display: flex;
+            }
+
+            .main-nav ul {
+                display: flex;
+                flex-direction: column;
+                padding: 0;
+            }
+
+            .main-nav ul li {
+                margin: 10px 0;
+                text-align: center;
+            }
+
+            .menu-toggle {
+                display: block;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Game Dev Studio</h1>
+        <button class="menu-toggle" aria-label="Toggle menu">☰</button>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="games.html">Games</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="services.html">Services</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="main-content">
+        <section class="section">
+            <h2>Our Services</h2>
+            <p>At Game Dev Studio, we offer a comprehensive range of services designed to bring your gaming projects to life. Our team of experts is dedicated to providing top-notch solutions tailored to your specific needs. Whether you’re an independent developer or part of a larger studio, we have the expertise to support you throughout every phase of game development.</p>
+            <ul>
+                <li>
+                    <strong>Game Design:</strong> We craft innovative and engaging game designs that captivate players and provide immersive experiences. Our design process includes concept development, gameplay mechanics, and user experience optimization to ensure your game stands out in a crowded market.
+                </li>
+                <li>
+                    <strong>Programming:</strong> Our skilled programmers use the latest technologies and coding practices to develop games with smooth and efficient gameplay. From game engines to custom scripts, we handle all aspects of programming to bring your game vision to reality.
+                </li>
+                <li>
+                    <strong>Art and Animation:</strong> We offer high-quality graphics and animations that enhance the visual appeal of your game. Our art team creates stunning character models, environments, and animations that bring your game’s world to life with attention to detail and creativity.
+                </li>
+                <li>
+                    <strong>Audio Design:</strong> Our audio experts design dynamic sound effects and compose music that enhance the gaming experience. We focus on creating immersive audio landscapes that complement the gameplay and engage players on an auditory level.
+                </li>
+                <li>
+                    <strong>Consulting:</strong> We provide strategic advice and guidance to optimize your game development process. Our consulting services include project management, market analysis, and technical advice to help you achieve your development goals and ensure project success.
+                </li>
+            </ul>
+
+            <!-- Embedded video -->
+            <iframe src="https://www.youtube.com/embed/U9vqzH65Zzw?si=8k6atExe-auMC6Zl" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Game Dev Studio. All rights reserved.</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const menuToggle = document.querySelector('.menu-toggle');
+            const nav = document.querySelector('.main-nav');
+
+            menuToggle.addEventListener('click', () => {
+                nav.classList.toggle('active');
+            });
+        });
+    </script>
+</body>
+</html>
